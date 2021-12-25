@@ -1,12 +1,17 @@
 name: eskotlin actions
 
-on: [push]
-
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  release:
+    types:
+      - created
 
 jobs:
-
-
-
   test:
     runs-on: ubuntu-latest
     steps:
